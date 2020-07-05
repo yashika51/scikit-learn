@@ -661,6 +661,9 @@ class ElasticNet(MultiOutputMixin, RegressorMixin, LinearModel):
         number of iterations run by the coordinate descent solver to reach
         the specified tolerance.
 
+    dual_gap_ : float or ndarray of shape (n_targets,)
+        dual gap at the end of optimization for optimal alpha ``alpha_``.
+
     Examples
     --------
     >>> from sklearn.linear_model import ElasticNet
@@ -1645,6 +1648,9 @@ class ElasticNetCV(RegressorMixin, LinearModelCV):
     n_iter_ : int
         number of iterations run by the coordinate descent solver to reach
         the specified tolerance for the optimal alpha.
+
+    dual_gap_ : float or ndarray of shape (n_targets,)
+        dual gap at the end of optimization for optimal alpha ``alpha_``.
 
     Examples
     --------
